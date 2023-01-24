@@ -521,20 +521,16 @@ img {
   background: #4d5ae5;
   border-radius: 4px;
   border: transparent;
-  
+
   cursor: pointer;
-  
-  
 }
 
-.input-subscribe-icon{
+.input-subscribe-icon {
   position: absolute;
-  fill: #FFFFFF;
+  fill: #ffffff;
   margin-left: 16px;
   align-items: center;
- 
 }
-
 
 .footer-input-paragraph {
   font-family: "Roboto";

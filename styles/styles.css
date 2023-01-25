@@ -503,13 +503,34 @@ img {
   border-radius: 4px;
   outline-color: transparent;
   padding-left: 16px;
+  color: #f4f4fd;
+}
+
+.footer-input::placeholder {
+  font-size: 12px;
+  
+}
+
+.user-email-label{
+  padding-right: 16px;
+
+}
+
+.modal-form-footer {
+  display: flex;
+  align-items: center;
+  
 }
 
 .subscribe-input-button {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   width: 165px;
   height: 40px;
-  position: absolute;
+
   margin-left: 24px;
   color: #ffffff;
 
@@ -523,10 +544,23 @@ img {
   border: transparent;
 
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+.subscribe-input-button:hover {
+background-color: var(--backgroung-dark-color);
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.subscribe-input-button:focus {
+background-color: var(--backgroung-dark-color);
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+
 .input-subscribe-icon {
-  position: absolute;
   fill: #ffffff;
   margin-left: 16px;
   align-items: center;
@@ -540,7 +574,7 @@ img {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #ffffff;
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 .footer-input-content {
@@ -687,6 +721,10 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding-top: 72px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
   width: 408px;
   min-height: 584px;
   background-color: #fff;
@@ -743,27 +781,31 @@ img {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 15px;
-  margin-top: 72px;
-  margin-left: 24px;
-  margin-right: 24px;
 }
 
 .modal-form {
 }
-.input-content {
-  margin-left: 24px;
-}
 
 .modal-field {
+  position: relative;
   margin-bottom: 25px;
 }
 .input-wrap {
   position: relative;
 }
 
+.input-icon {
+  position: absolute;
+  top: 25px;
+  left: 19px;
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal-input {
   display: block;
-  width: 360px;
+  width: 100%;
   height: 40px;
 
   background-color: transparent;
@@ -775,56 +817,93 @@ img {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-icon {
-  position: absolute;
-  margin-left: 20px;
-  margin-bottom: 53px;
-}
-
 .modal-input::placeholder {
   font-size: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-text {
-  display: inline-block;
-  margin-bottom: 5px;
-  font-size: 12px;
+.modal-input:focus {
+  border-color: #404bbf;
+}
+
+.modal-input:focus + .input-icon {
+  fill: #404bbf;
 }
 
 .modal-input:hover {
   border-color: #404bbf;
-}
-
-.modal-input:hover .input-icon {
-  border-color: #404bbf;
   fill: #404bbf;
 }
-.modal-input:focus .input-icon {
+.modal-input:hover + .input-icon {
   fill: #404bbf;
   border-color: #404bbf;
 }
 
-.textarea {
+.modal-comment {
+  width: 100%;
+  height: 100px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+  padding: 10px;
+  resize: none;
 }
 
-.input-privacy-paragraph {
-  font-weight: 400;
+.modal-comment::placeholder {
   font-size: 12px;
-  line-height: 16px;
   letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+}
 
-  color: #757575;
+.check-text {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.check-text span {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+  display: block;
+  border-radius: 3px;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.check-icon {
+}
+
+.textarea-link{
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.04em;
+color: #4D5AE5;
+}
+
+.intup-content{
+  display: flex;
+}
+
+.input-check:checked + .check-text span {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
 
 .send-button {
+  width: 169px;
+  height: 56px;
   margin: auto;
-  margin-top: 24px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 16px 32px;
-  gap: 10px;
-
+  align-items: center;
+  text-align: center;
+  justify-content: center;
   font-size: 16px;
   line-height: 1.07;
   letter-spacing: 0.04em;
